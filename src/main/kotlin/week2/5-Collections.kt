@@ -2,7 +2,7 @@ package week2
 
 fun main() {
     lists()
-    maps()
+//    maps()
 }
 
 fun lists() {
@@ -62,4 +62,5 @@ fun maps() {
     map1
         .filter { it.value.length > 10 }
         .forEach { println("${it.key} -> ${it.value}") }
+    
 }

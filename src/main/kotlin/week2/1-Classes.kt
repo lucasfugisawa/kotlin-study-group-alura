@@ -1,9 +1,8 @@
 package week2
 
-import kotlin.math.PI
+import kotlin.math.sqrt
 
 fun main() {
-    // classes, objetos, interfaces, enums, segurança de nulos, coleções (list, set, map)
     val aRectangle = Rectangle(2.5, 1.25)
     val aSquare = Square(5.0)
 
@@ -19,16 +18,19 @@ fun main() {
 
 }
 
+val obj : Any? = null
+
 // Access modifiers: public (default),  private, protected, internal
 
-
-open class Rectangle(
+open class Rectangle (
     val length: Double,
     val height: Double,
 ) {
     fun perimeter() = length * 2 + height * 2
     fun area() = length * height
-    val diagonal: Double by lazy { Math.sqrt(2 * length * height) }
+
+    val diagonal: Double by lazy { sqrt(2 * length * height) }
+
     private lateinit var color: Color
 
     fun paint(color: Color) {

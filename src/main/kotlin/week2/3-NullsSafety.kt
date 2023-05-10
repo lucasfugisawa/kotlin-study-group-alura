@@ -9,6 +9,7 @@ fun main() {
     // s2.length
 
     var s2Length = if (s2 != null) s2.length else 0
+
     s2Length = s2?.length ?: 0
 
     if (s2 != null) {

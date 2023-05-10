@@ -10,7 +10,6 @@ fun main() {
         println(obj1.length) // smart cast
     }
 
-
     val obj2 = obj1 as String
     val obj3 = obj1 as? String
 
