@@ -1,8 +1,8 @@
 package week2
 
 fun main() {
-    lists()
-//    maps()
+//    lists()
+    maps()
 }
 
 fun lists() {
@@ -22,8 +22,8 @@ fun lists() {
     newList.forEachIndexed { index, value -> println("$index: $value") }
 
     newList
-        .map { it.length }
-        .filter { it > 4 }
+        .map { name -> name.length }
+        .filter { length -> length > 4 }
         .average()
 }
 
@@ -48,11 +48,12 @@ fun maps() {
     )
 
     map1.get("SP")
-    map1["SP"]
+    val s = map1["SP"]
+    println(s)
 
     map1.put("ES", "Espírito Santo")
     map1["ES"] = "Espírito Santo"
-    map1 + Pair("ES", "Espírito Santo")
+    map1 + ("ES" to "Espírito Santo")
 
     map1.remove("ES")
     map1 - "ES"
@@ -62,5 +63,5 @@ fun maps() {
     map1
         .filter { it.value.length > 10 }
         .forEach { println("${it.key} -> ${it.value}") }
-    
+
 }

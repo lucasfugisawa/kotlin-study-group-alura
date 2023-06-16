@@ -39,10 +39,10 @@ private fun strings() {
 
     val stringLiteral: String = "abcd 123"
     val rawString = """
-    |   for (c in "foo")
-    |       print(c)
-    |       
-    """.trimMargin()
+    #   for (c in "foo")
+    #       print(c)
+    #       
+    """.trimMargin("#")
     println(rawString)
 
     val stringTemplate = "'$stringLiteral' tem ${stringLiteral.length} caracteres"

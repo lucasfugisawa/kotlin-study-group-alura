@@ -3,6 +3,7 @@ package week3
 import week3.fieldvalidation.*
 
 fun main() {
+
     val emailValido = "lucasfugisawa@gmail.com".isEmail()
     println(emailValido)
 

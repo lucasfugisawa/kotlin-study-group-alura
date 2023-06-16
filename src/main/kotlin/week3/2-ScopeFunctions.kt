@@ -10,7 +10,7 @@ data class Address(
 
 fun main() {
 
-    val address = Address("x", "x", "x", "x", "x")
+    val address: Address = Address("x", "x", "x", "x", "x")
 
     address.street1 = "9801 Maple Ave"
     address.street2 = "Apartment 255"
@@ -46,7 +46,7 @@ fun main() {
     // returns the result of the lambda
     // -> executing a lambda on non-null objects
     // -> introducing an expression as a variable in local scope
-    var resLet = address.let {
+    var resLet = address?.let {
         it.street1 = "9801 Maple Ave"
         it.street2 = "Apartment 255"
         it.city = "Rocksteady"
@@ -77,8 +77,8 @@ fun main() {
         println(this)
     }
 
-
     // takeIf / takeUnless:
+    println("takeIf / takeUnless")
 
     var resTakeIf = address.takeIf { it.state == "IN" }
     println(resTakeIf)
